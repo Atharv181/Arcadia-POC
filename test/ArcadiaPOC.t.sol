@@ -42,7 +42,7 @@ function test_PoC() external {
     vm.stopPrank();
 
     // add Tranche to the LendingPool
-    vm.prank(address(0x1804c8AB1F12E6bbf3894d4083f33e07309d1f38));
+    vm.prank(address(lendingPool.owner()));
     lendingPool.addTranche(address(tranche), uint16(10_000));
 
     // user1 deposit
